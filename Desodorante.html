@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desodorantes - Yanbal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Fondo de video */
+    .video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+      pointer-events: none; /* ESTA LÍNEA PERMITE EL MOVIMIENTO DEL MOUSE */
+    }
+
+    header {
+      text-align: center;
+      color: white;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 30px 20px 40px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #d77a61;
+    }
+
+    .card p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .card button {
+      padding: 12px 28px;
+      border: none;
+      background-color: #d77a61;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #b85f4d;
+    }
+
+    /* Responsivo para dispositivos pequeños */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        padding: 20px 15px;
+      }
+    }
+
+    /* Responsivo para dispositivos móviles muy pequeños */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .card {
+        padding: 15px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop class="video-fondo">
+    <source src="video-fondo-desodorante.mp4" type="video/mp4">
+  </video>
+
+  <header>
+    <a href="index.html"><h1>Desodorantes</h1></a>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>Esencia Floral</h2>
+      <img src="https://via.placeholder.com/300x250?text=Perfume+1" alt="Perfume 1" style="width: 100%; border-radius: 15px; margin: 15px 0;">
+      <p>Aromas suaves y elegantes para toda ocasión.</p>
+      <p class="precio">$35.00</p>
+      <button onclick="location.href='Perfume1.html'">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h2>Pasión Nocturna</h2>
+      <img src="https://via.placeholder.com/300x250?text=Perfume+2" alt="Perfume 2" style="width: 100%; border-radius: 15px; margin: 15px 0;">
+      <p>Fragancia intensa y duradera con notas orientales.</p>
+      <p class="precio">$42.00</p>
+      <button onclick="location.href='Perfume2.html'">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h2>Día Radiante</h2>
+      <img src="https://via.placeholder.com/300x250?text=Perfume+3" alt="Perfume 3" style="width: 100%; border-radius: 15px; margin: 15px 0;">
+      <p>Perfecto para uso diario, fresco y natural.</p>
+      <p class="precio">$29.99</p>
+      <button onclick="location.href='Perfume3.html'">Comprar</button>
+    </div>
+
+    <div class="card">
+      <h2>Encanto Cítrico</h2>
+      <img src="https://via.placeholder.com/300x250?text=Perfume+4" alt="Perfume 4" style="width: 100%; border-radius: 15px; margin: 15px 0;">
+      <p>Refrescante y vibrante, para un día lleno de energía.</p>
+      <p class="precio">$38.50</p>
+      <button onclick="location.href='Perfume4.html'">Comprar</button>
+    </div>
+  </main>
+
+</body>
+</html>

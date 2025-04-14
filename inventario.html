@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo Yanbal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Fondo de video */
+    .video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+      pointer-events: none; /* ESTA LÍNEA PERMITE EL MOVIMIENTO DEL MOUSE */
+    }
+
+    header {
+      text-align: center;
+      color: white;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 30px 20px 40px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h2 {
+      margin-bottom: 15px;
+      color: #d77a61;
+    }
+
+    .card p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .card button {
+      padding: 12px 28px;
+      border: none;
+      background-color: #d77a61;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #b85f4d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop class="video-fondo">
+    <source src="video-fondo-categoria.mp4" type="video/mp4">
+  </video>
+
+  <header>
+    <a href="index.html"><h1>Catálogo de Productos Yanbal</h1></a>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>Perfumes</h2>
+      <img src="perfumes.png" alt="Perfumes" style="width: 100%; border-radius: 15px; margin: 15px 0;">
+      <p>Aromas elegantes para cada momento.</p>
+      <button onclick="location.href='Perfumes.html'">Ingresar</button>
+    </div>
+
+    <div class="card">
+      <h2>Maquillaje</h2>
+      <img src="maquillaje.png" alt="Maquillaje" style="width: 100%; border-radius: 15px; margin: 15px 0;">
+      <p>Colores que resaltan tu belleza natural.</p>
+      <button onclick="location.href='Maquillaje.html'">Ingresar</button>
+    </div>
+
+    <div class="card">
+      <h2>Desodorantes</h2>
+      <img src="desodorante.png" alt="Desodorante" style="width: 100%; border-radius: 15px; margin: 15px 0;">
+      <p>Frescura duradera para todo tu día.</p>
+      <button onclick="location.href='Desodorante.html'">Ingresar</button>
+    </div>
+
+    <div class="card">
+      <h2>Cremas</h2>
+      <img src="cremas.png" alt="Cremas" style="width: 100%; border-radius: 15px; margin: 15px 0;">
+      <p>Suavidad, nutrición y cuidado en cada aplicación.</p>
+      <button onclick="location.href='Cremas.html'">Ingresar</button>
+    </div>
+  </main>
+
+</body>
+</html>
